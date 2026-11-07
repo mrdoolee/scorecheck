@@ -1,0 +1,186 @@
+/* App mockups drawn in HTML with made-up data (가온중학교, 2반 7번 윤하늘). Inside .mk the colors are the app's own
+   (src/renderer/src/styles.css), so the pictures read as the app on top of the paper page.
+   Every size is in em and the em follows the mock's width (container query units), so a mock scales as one picture.
+   Default styles are the finished state; animations only add the "before" frames. */
+
+.mock {
+  --a-bg: #ffffff;
+  --a-surface: #f6f9fc;
+  --a-text: #0a2540;
+  --a-text-2: #425466;
+  --a-muted: #8792a2;
+  --a-line: #e3e8ee;
+  --a-primary: #635bff;
+  --a-primary-soft: #eeedff;
+  --a-err: #c0263b;
+  --a-ok: #0e8a5f;
+  container-type: inline-size;
+  position: relative;
+  user-select: none;
+}
+.mk { position: relative; font-size: 1.75cqw; line-height: 1.4; color: var(--a-text); }
+.mock.is-paused *, .mock.is-paused *::before, .mock.is-paused *::after { animation-play-state: paused !important; }
+
+/* signature strokes (ballpoint blue), shared path #sig-path */
+.sig { display: block; width: 100%; height: 100%; overflow: visible; }
+.sig use { fill: none; stroke: var(--pen); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
+
+/* ---------------------------------------------------------------- hero */
+.mock-hero .mk { padding: 0 0 6em; }
+.laptop { width: 86%; }
+.screen { background: var(--a-bg); border: 0.9em solid #1f2433; border-radius: 1.2em 1.2em 0 0; padding: 1.6em 1.8em 1.8em; box-shadow: 0 2.4em 4em rgba(29, 43, 79, 0.16); }
+.laptop .base { height: 1.3em; margin: 0 -4%; background: linear-gradient(#d9d4c8, #bdb7a8); border-radius: 0 0 1.4em 1.4em; }
+.sv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1em; }
+.sv-title { color: var(--a-text-2); font-size: 0.95em; }
+.sv-name { font-size: 1.9em; font-weight: 700; display: flex; align-items: center; gap: 0.4em; flex-wrap: wrap; }
+.sv-name b { font-weight: 700; }
+.badge { font-size: 0.42em; background: #e3f6ee; color: var(--a-ok); border-radius: 99em; padding: 0.25em 0.8em; font-weight: 700; }
+.sv-ctl { display: flex; gap: 0.4em; }
+.sv-ctl span { width: 2.6em; height: 2.6em; display: grid; place-items: center; border: 1px solid var(--a-line); border-radius: 0.6em; color: var(--a-primary); font-size: 0.9em; }
+
+.neis-row { display: grid; grid-template-columns: 3fr 4fr 3fr 3fr 3fr 6fr; margin: 1.1em 0 1em; border: 1px solid #333; font-size: 0.95em; background: #fff; }
+.neis-row .c { border-right: 1px solid #333; padding: 0.35em 0.4em; text-align: center; color: #111; }
+.neis-row .c-remark { border-right: 0; outline: 1.5px dashed var(--a-primary); outline-offset: -3px; padding: 0.15em 0.6em; height: 2.2em; }
+
+.app-card { background: var(--a-bg); border: 1px solid var(--a-line); border-radius: 1em; padding: 1em 1.2em; margin-bottom: 0.9em; box-shadow: 0 0.2em 0.6em rgba(18, 24, 38, 0.05); }
+.total { display: grid; grid-template-columns: auto 1fr; gap: 0.6em 1.6em; align-items: center; }
+.score b { font-size: 3.2em; color: var(--a-primary); font-weight: 700; letter-spacing: -0.02em; }
+.score small { font-size: 1.1em; color: var(--a-muted); margin-left: 0.3em; }
+.diffs { display: flex; flex-direction: column; gap: 0.2em; font-size: 1.05em; }
+.diffs em { font-style: normal; color: var(--a-primary); font-weight: 700; }
+.bars { grid-column: 1 / -1; display: grid; grid-template-columns: 5.5em 1fr; gap: 0.35em 0.8em; align-items: center; font-size: 0.9em; color: var(--a-text-2); }
+.bt { height: 0.7em; background: var(--a-surface); border-radius: 99em; overflow: hidden; }
+.bt i { display: block; height: 100%; background: #c9c6ff; border-radius: 99em; }
+.bt i.me { background: linear-gradient(90deg, #b3d4ff, var(--a-primary)); }
+.items-h { font-weight: 700; margin-bottom: 0.5em; }
+.items .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.35em; }
+.items .grid span { border: 1px solid var(--a-line); border-radius: 0.5em; padding: 0.25em 0.5em; font-size: 0.85em; color: var(--a-text-2); display: flex; justify-content: space-between; }
+.items .grid b { color: var(--a-text); }
+.items .grid .ng { border: 2px solid var(--a-err); }
+.items .grid .ng b { color: var(--a-err); }
+.app-btn { display: block; width: 46%; margin: 0.4em auto 0; text-align: center; background: var(--a-primary); color: #fff; font-weight: 700; padding: 0.7em 0; border-radius: 0.7em; }
+
+.phone { position: absolute; right: 0; bottom: 0; width: 34%; background: #fff; border: 0.7em solid #1f2433; border-radius: 2.2em; padding: 1em 0.9em 1.2em; box-shadow: 0 2em 3.5em rgba(29, 43, 79, 0.25); }
+.ph-bar { display: flex; justify-content: space-between; font-size: 0.75em; color: var(--a-text-2); margin-bottom: 0.8em; }
+.ph-bar .dot { display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; background: var(--a-ok); margin-right: 0.3em; }
+.ph-row { display: grid; grid-template-columns: 2fr 3fr 2fr 3fr; border: 1px solid #333; font-size: 0.75em; }
+.ph-row span { border-right: 1px solid #333; padding: 0.25em 0.2em; text-align: center; }
+.ph-row .ph-remark { border-right: 0; outline: 1.5px dashed var(--a-primary); outline-offset: -3px; }
+.ph-cap { font-size: 0.68em; color: var(--a-text-2); margin: 0.4em 0 0.8em; line-height: 1.35; }
+.ph-who { font-weight: 700; font-size: 0.95em; margin-bottom: 0.4em; }
+.ph-pad { position: relative; height: 8.5em; border: 1.5px dashed var(--a-line); border-radius: 0.8em; background: var(--a-surface); padding: 1em 0.8em 1.6em; }
+.ph-line { position: absolute; left: 10%; right: 10%; bottom: 1.4em; border-bottom: 1px solid var(--a-muted); }
+.ph-btns { display: grid; grid-template-columns: 1fr 1.4fr; gap: 0.5em; margin-top: 0.8em; font-size: 0.85em; }
+.ph-btns span { text-align: center; border: 1px solid var(--a-line); border-radius: 0.6em; padding: 0.55em 0; }
+.ph-btns .primary { background: var(--a-primary); color: #fff; border-color: var(--a-primary); font-weight: 700; }
+
+/* hero timeline (10s): pen draws on the phone, 제출 is pressed, the same signature lands in the laptop's 비고 cell */
+.mock-hero .sig-draw use { animation: hero-draw 10s ease-in-out infinite; }
+.mock-hero .sync-press { animation: hero-press 10s infinite; }
+.mock-hero .sig-late, .mock-hero .sync-badge { animation: hero-land 10s infinite; }
+@keyframes hero-draw { 0%, 8% { stroke-dashoffset: 1; opacity: 1; } 40%, 88% { stroke-dashoffset: 0; opacity: 1; } 96%, 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes hero-press { 0%, 43% { filter: none; transform: none; } 45% { filter: brightness(0.8); transform: scale(0.94); } 48%, 100% { filter: none; transform: none; } }
+@keyframes hero-land { 0%, 48% { opacity: 0; transform: translateY(-0.4em); } 54%, 88% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+
+/* ---------------------------------------------------------------- step mocks */
+.mock-sm .mk { font-size: 3.6cqw; background: var(--a-bg); border: 1px solid var(--rule); border-radius: 1em; padding: 1.1em; height: 18em; display: flex; flex-direction: column; justify-content: center; gap: 0.8em; box-shadow: 0 0.6em 1.6em rgba(29, 43, 79, 0.07); }
+
+/* ① import */
+.drop { position: relative; border: 2px dashed #c9c6ff; background: var(--a-primary-soft); border-radius: 0.8em; padding: 2.2em 0.8em 0.8em; display: flex; flex-direction: column; gap: 0.45em; }
+.drop-hint { position: absolute; top: 0.6em; left: 0; right: 0; text-align: center; font-size: 0.8em; color: var(--a-text-2); }
+.file { display: flex; align-items: center; gap: 0.6em; background: #fff; border: 1px solid var(--a-line); border-radius: 0.5em; padding: 0.35em 0.6em; font-size: 0.85em; }
+.file i { font-style: normal; font-size: 0.75em; font-weight: 700; color: #fff; background: #1d7a46; border-radius: 0.3em; padding: 0.1em 0.4em; }
+.file i.pdf { background: #c0263b; }
+.check-line { font-size: 0.85em; color: var(--a-ok); background: #e3f6ee; border-radius: 0.5em; padding: 0.45em 0.7em; }
+.mock-import .file { animation: drop-in 7s ease-out infinite; }
+.mock-import .f2 { animation-delay: 0.35s; }
+.mock-import .f3 { animation-delay: 0.7s; }
+.mock-import .check-line { animation: fade-in 7s infinite; }
+@keyframes drop-in { 0%, 6% { opacity: 0; transform: translateY(-1.6em); } 16%, 88% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+@keyframes fade-in { 0%, 34% { opacity: 0; } 40%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+/* ② sign */
+.mock-sign .mk { flex-direction: row; align-items: center; justify-content: space-between; }
+.mini-pc { flex: 1.3; border: 1px solid var(--a-line); border-radius: 0.6em; padding: 0.7em; font-size: 0.82em; }
+.mini-name b { font-weight: 700; }
+.mini-score b { font-size: 1.9em; color: var(--a-primary); }
+.mini-btn { margin-top: 0.5em; background: var(--a-primary); color: #fff; text-align: center; border-radius: 0.5em; padding: 0.4em 0; font-weight: 700; font-size: 0.9em; }
+.hop { display: flex; gap: 0.3em; }
+.hop span { width: 0.45em; height: 0.45em; border-radius: 50%; background: var(--pen); animation: hop 1.4s infinite; }
+.hop span:nth-child(2) { animation-delay: 0.2s; }
+.hop span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes hop { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+.mini-phone { flex: 1; border: 0.35em solid #1f2433; border-radius: 1em; padding: 0.6em 0.5em; font-size: 0.8em; }
+.mini-who { font-weight: 700; margin-bottom: 0.3em; }
+.mini-pad { height: 4.4em; background: var(--a-surface); border: 1px dashed var(--a-line); border-radius: 0.5em; padding: 0.4em; }
+.mini-send { margin-top: 0.4em; background: var(--a-primary); color: #fff; text-align: center; border-radius: 0.5em; padding: 0.3em 0; font-weight: 700; }
+.mock-sign .sig-draw use { animation: hero-draw 7s ease-in-out infinite; }
+
+/* ③ pdf */
+.sheet { background: #fff; border: 1px solid #d0cbc0; box-shadow: 0.2em 0.3em 0 #ece4d3; padding: 0.7em; }
+.sheet-title { font-size: 0.78em; text-align: center; margin-bottom: 0.4em; color: #111; }
+.sheet table { width: 100%; border-collapse: collapse; font-size: 0.75em; color: #111; }
+.sheet th, .sheet td { border: 1px solid #444; padding: 0.15em 0.3em; text-align: center; height: 2.2em; }
+.sheet th { background: #f2f2f2; font-weight: 700; }
+.sheet td:last-child { width: 32%; padding: 0.1em 0.5em; }
+.saved { font-size: 0.75em; color: var(--a-text-2); text-align: center; }
+.mock-pdf .sig { animation: land 8s infinite both; }
+.mock-pdf .s2 { animation-delay: 0.5s; }
+.mock-pdf .s3 { animation-delay: 1s; }
+.mock-pdf .s4 { animation-delay: 1.5s; }
+.mock-pdf .s5 { animation-delay: 2s; }
+@keyframes land { 0%, 8% { opacity: 0; transform: scale(1.3); } 14%, 82% { opacity: 1; transform: none; } 92%, 100% { opacity: 0; } }
+
+/* ---------------------------------------------------------------- hotspot diagram (on the navy band) */
+.hs { width: 100%; height: auto; display: block; font-family: inherit; }
+.hs text { font-family: inherit; text-anchor: middle; }
+.hs-out rect { fill: none; stroke: rgba(255, 255, 255, 0.35); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.hs-out text { fill: rgba(255, 255, 255, 0.55); font-size: 15px; }
+.hs-cut { fill: none; stroke: rgba(255, 255, 255, 0.2); stroke-width: 1.5; stroke-dasharray: 3 6; }
+.hs-x path { fill: none; stroke: #ff9b8a; stroke-width: 3; stroke-linecap: round; }
+.hs-dev rect, .hs-dev path { fill: #f3efe6; }
+.hs-dev .hs-screen { fill: #2b3c66; }
+.hs-label { fill: #fff; font-size: 16px; font-weight: 700; }
+.hs-link { fill: none; stroke: rgba(255, 226, 122, 0.35); stroke-width: 8; stroke-linecap: round; }
+.hs-flow { fill: none; stroke: var(--marker); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 12; animation: flow 1.6s linear infinite; }
+.hs-tag { fill: var(--marker); font-size: 15px; font-weight: 700; }
+.hs-tag2 { fill: rgba(255, 255, 255, 0.75); font-size: 13px; }
+@keyframes flow { to { stroke-dashoffset: -28; } }
+
+/* ---------------------------------------------------------------- analysis (문항 분석 > 문항별) */
+.mock-analysis .mk { font-size: 1.25cqw; }
+.ia-panel { background: var(--a-surface); border-radius: 1.2em; padding: 1.6em 2em; box-shadow: 0 0.8em 2.4em rgba(29, 43, 79, 0.08); }
+.ia-title2 { font-size: 1.3em; font-weight: 700; margin-bottom: 0.6em; }
+.ia-legend { color: var(--a-muted); font-size: 0.95em; margin-bottom: 0.6em; }
+.ia-legend .seg-key { display: inline-block; width: 1em; height: 0.8em; border-radius: 0.2em; background: #f8c98a; vertical-align: -0.05em; }
+.flag { font-size: 0.85em; padding: 0.05em 0.6em; border-radius: 99em; background: #fff4e0; color: #9a5b00; white-space: nowrap; }
+.ia-row { display: grid; grid-template-columns: 3.5em 3.5em 3.5em 11em 6em 20em 1fr; gap: 1em; align-items: center; padding: 0.55em 0.4em; border-bottom: 1px solid var(--a-line); font-size: 1.02em; }
+.ia-head { font-weight: 700; color: var(--a-text-2); font-size: 0.95em; }
+.ia-row .num { text-align: right; font-variant-numeric: tabular-nums; }
+.ia-ans { color: #1d7a46; }
+.muted-n { color: var(--a-muted); }
+.rate-bar { position: relative; display: flex; align-items: center; width: 100%; height: 1.5em; background: #fff; border: 1px solid var(--a-line); border-radius: 0.4em; overflow: hidden; }
+.rate-bar > span { position: absolute; inset: 0 auto 0 0; transform-origin: left; animation: grow-x 1.1s ease-out both; }
+.rate-bar em { position: relative; font-style: normal; font-size: 0.85em; padding-left: 0.5em; }
+.choice-bar { display: flex; width: 100%; height: 1.6em; border-radius: 0.4em; overflow: hidden; background: #fff; border: 1px solid var(--a-line); }
+.choice-bar .seg { display: grid; place-items: center; min-width: 2px; font-size: 0.82em; color: var(--a-text-2); background: #dfe4f6; border-right: 1px solid #fff; }
+.choice-bar .seg.correct { background: #a6c8f4; color: var(--a-text); box-shadow: inset 0 0 0 2px #4a86e0; font-weight: 700; }
+.choice-bar .seg.attractive { background: #f8c98a; color: var(--a-text); }
+@keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ---------------------------------------------------------------- narrow screens and reduced motion */
+@media (max-width: 900px) {
+  .mock-sm .mk { height: auto; min-height: 12em; }
+}
+@media (max-width: 720px) {
+  .mock-hero .mk { font-size: 2.1cqw; }
+  .mock-sm .mk { font-size: 4.2cqw; }
+  .mock-analysis .mk { font-size: 2.9cqw; }
+  .ia-panel { padding: 1.2em 1em; }
+  .ia-row { grid-template-columns: 2.2em 2.2em 6.6em 3.4em 1fr; gap: 0.6em; padding: 0.5em 0.1em; }
+  .ia-row > :nth-child(3), .ia-row > :last-child { display: none; }
+  .ia-row .flag { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mock *, .mock *::before, .mock *::after { animation: none !important; }
+}

@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "몇점 (ScoreCheck)",
+    "url": "",
+    "stack": "Vite"
+  },
+  "tracks": [
+    "security",
+    "edzip"
+  ],
+  "edzipCase": null,
+  "teacher": {
+    "dormsHandle": ""
+  },
+  "ownershipConfirmed": true
+}

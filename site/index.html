@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>몇점 — 성적 확인은 PC로, 서명은 휴대폰으로</title>
+  <meta name="description" content="나이스 성적 파일을 넣으면 학생이 PC 화면에서 본인 성적을 확인하고 선생님 휴대폰이나 태블릿 PC에 손으로 서명합니다. 서명은 일람표 PDF 비고칸에 들어갑니다. 무료 Windows 앱.">
+  <meta property="og:title" content="몇점 — 성적 확인은 PC로, 서명은 휴대폰으로">
+  <meta property="og:description" content="학생은 PC 화면으로 성적을 확인하고, 선생님 휴대폰에 서명합니다. 서명은 일람표 PDF 비고칸에. 무료 Windows 앱.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon.png">
+  <meta name="theme-color" content="#fbf8f1">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mock.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#flow">본문으로 건너뛰기</a>
+
+  <header class="nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="32" height="32"><span>몇점</span></a>
+      <nav class="nav-links" aria-label="페이지 안내">
+        <a href="#flow">사용 흐름</a>
+        <a href="#features">휴대폰 서명</a>
+        <a href="#privacy">개인정보</a>
+        <a href="#install">설치</a>
+        <a href="#faq">자주 묻는 질문</a>
+      </nav>
+      <a class="btn btn-ink btn-sm" data-gh="releases" href="#install">다운로드</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>성적 확인은 <mark>PC로</mark>,<br>서명은 <mark>휴대폰으로</mark>.</h1>
+          <p class="lead">나이스 성적 파일을 넣으면 학생이 PC 화면에서 <span class="nw">본인 성적을 확인하고,</span> 선생님 휴대폰이나 태블릿 PC에 <span class="nw">손으로 서명합니다.</span> 서명은 나이스 일람표 PDF의 <span class="nw">비고칸에 들어갑니다.</span></p>
+          <div class="actions">
+            <a class="btn btn-ink" data-gh="releases" href="#install">Windows용 무료 다운로드</a>
+            <a class="btn btn-line" href="#flow">사용 흐름 보기</a>
+          </div>
+          <p class="fineprint">무료 · 관리자 권한 없이 설치 · 앱은 인터넷에 접속하지 않음</p>
+        </div>
+        <div class="mock mock-hero" data-mock="hero" aria-hidden="true">
+          <div class="mk">
+            <div class="laptop">
+              <div class="screen app">
+                <div class="sv-head">
+                  <div>
+                    <div class="sv-title">가온중학교 · 2026학년도 1학기 2학년 2회고사 과학</div>
+                    <div class="sv-name">2반 7번 <b>윤하늘</b> <span class="badge sync-badge">✓ 서명 완료</span></div>
+                  </div>
+                  <div class="sv-ctl"><span>◀</span><span>▶</span><span>🔒</span></div>
+                </div>
+                <div class="neis-row">
+                  <span class="c c-no">2/7</span><span class="c c-name">윤하늘</span><span class="c">20.0</span><span class="c">66.4</span><span class="c c-sum">86.4</span>
+                  <span class="c c-remark"><svg class="sig sig-late" viewBox="0 0 130 56"><use href="#sig-path"/></svg></span>
+                </div>
+                <div class="app-card total">
+                  <div class="score"><b>86.4</b><small>/ 100점</small></div>
+                  <div class="diffs">
+                    <span>학급 평균보다 <em>12.1점 높아요</em></span>
+                    <span>학년 평균보다 <em>10.8점 높아요</em></span>
+                  </div>
+                  <div class="bars">
+                    <span class="bl">나</span><span class="bt"><i style="width:86%" class="me"></i></span>
+                    <span class="bl">학급 평균</span><span class="bt"><i style="width:74%"></i></span>
+                    <span class="bl">학년 평균</span><span class="bt"><i style="width:75%"></i></span>
+                  </div>
+                </div>
+                <div class="app-card items">
+                  <div class="items-h">문항별 결과</div>
+                  <div class="grid">
+                    <span>1<b>○</b></span><span>2<b>○</b></span><span class="ng">3<b>④</b></span><span>4<b>○</b></span><span>5<b>○</b></span><span>6<b>○</b></span>
+                    <span>7<b>○</b></span><span>8<b>○</b></span><span>9<b>○</b></span><span class="ng">10<b>②</b></span><span>11<b>○</b></span><span>12<b>○</b></span>
+                  </div>
+                </div>
+                <div class="app-btn">서명하기</div>
+              </div>
+              <div class="base"></div>
+            </div>
+            <div class="phone">
+              <div class="ph-bar"><span><i class="dot"></i>PC에 연결됨</span><span>몇점 서명</span></div>
+              <div class="ph-row"><span>2/7</span><span>윤하늘</span><span>86.4</span><span class="ph-remark"></span></div>
+              <p class="ph-cap">일람표 원본의 내 줄입니다. 점선 칸(비고)에 서명이 들어갑니다.</p>
+              <div class="ph-who">2반 7번 윤○늘</div>
+              <div class="ph-pad">
+                <svg class="sig sig-draw" viewBox="0 0 130 56">
+                  <defs>
+                    <path id="sig-path" pathLength="1" d="M8 38 C14 14 26 10 28 30 C30 44 36 46 42 28 C46 16 52 18 52 32 C52 42 58 42 64 26 C68 16 74 18 74 30 C74 40 82 40 90 24 C94 16 100 18 98 30 C96 40 104 42 112 30 C116 24 120 22 124 22 M30 48 C58 44 92 43 126 42"/>
+                  </defs>
+                  <use href="#sig-path"/>
+                </svg>
+                <span class="ph-line"></span>
+              </div>
+              <div class="ph-btns"><span>지우기</span><span class="primary sync-press">서명 제출</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="band">
+      <div class="wrap">
+        <h2>세 단계로 끝납니다</h2>
+        <p class="section-lead">확인표를 출력해 돌리고, 서명을 받고, 다시 모으던 일을 노트북 한 대와 <span class="nw">휴대폰 하나로 바꿉니다.</span></p>
+        <ol class="steps">
+          <li class="step">
+            <div class="mock mock-sm mock-import" data-mock="step-import" aria-hidden="true">
+              <div class="mk">
+                <div class="drop">
+                  <span class="drop-hint">여기에 파일을 끌어다 놓으세요</span>
+                  <span class="file f1"><i>xlsx</i>2반 학생답 정오표</span>
+                  <span class="file f2"><i>xlsx</i>학년 교과목별 일람표</span>
+                  <span class="file f3"><i class="pdf">pdf</i>2반 교과목별 일람표</span>
+                </div>
+                <div class="check-line"><b>✓</b> 나이스 집계와 일치 (인원·총점·평균)</div>
+              </div>
+            </div>
+            <h3><span class="step-no">①</span> 나이스 파일 넣기</h3>
+            <p>나이스에서 내려받은 정오표·일람표와 반별 일람표 PDF를 끌어다 놓습니다. 인원·총점·평균이 <span class="nw">나이스 집계와</span> 맞는지 앱이 먼저 확인합니다.</p>
+          </li>
+          <li class="step">
+            <div class="mock mock-sm mock-sign" data-mock="step-sign" aria-hidden="true">
+              <div class="mk">
+                <div class="mini-pc">
+                  <div class="mini-name">2반 7번 <b>윤하늘</b></div>
+                  <div class="mini-score"><b>86.4</b> / 100점</div>
+                  <div class="mini-btn">성적을 확인했어요</div>
+                </div>
+                <div class="hop" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="mini-phone">
+                  <div class="mini-who">윤○늘</div>
+                  <div class="mini-pad"><svg class="sig sig-draw" viewBox="0 0 130 56"><use href="#sig-path"/></svg></div>
+                  <div class="mini-send">서명 제출</div>
+                </div>
+              </div>
+            </div>
+            <h3><span class="step-no">②</span> 확인은 PC로, 서명은 휴대폰에</h3>
+            <p>학생이 PC 화면에서 본인 점수와 문항별 결과를 보고 [성적을 확인했어요]를 누른 뒤, <span class="nw">선생님 휴대폰에 서명합니다.</span></p>
+          </li>
+          <li class="step">
+            <div class="mock mock-sm mock-pdf" data-mock="step-pdf" aria-hidden="true">
+              <div class="mk">
+                <div class="sheet">
+                  <div class="sheet-title">교과목별 일람표 · 2학년 2반 과학</div>
+                  <table>
+                    <thead><tr><th>반/번호</th><th>성명</th><th>합계</th><th>비고</th></tr></thead>
+                    <tbody>
+                      <tr><td>2/3</td><td>하은솔</td><td>71.2</td><td><svg class="sig s1" viewBox="0 0 130 56"><use href="#sig-path"/></svg></td></tr>
+                      <tr><td>2/4</td><td>구태린</td><td>64.8</td><td><svg class="sig s2" viewBox="0 0 130 56"><use href="#sig-path"/></svg></td></tr>
+                      <tr><td>2/5</td><td>모시원</td><td>92.6</td><td><svg class="sig s3" viewBox="0 0 130 56"><use href="#sig-path"/></svg></td></tr>
+                      <tr><td>2/6</td><td>탁예빈</td><td>58.3</td><td><svg class="sig s4" viewBox="0 0 130 56"><use href="#sig-path"/></svg></td></tr>
+                      <tr><td>2/7</td><td>윤하늘</td><td>86.4</td><td><svg class="sig s5" viewBox="0 0 130 56"><use href="#sig-path"/></svg></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="saved">2회고사 과학 2반 서명_260707.pdf</div>
+              </div>
+            </div>
+            <h3><span class="step-no">③</span> 서명 든 PDF 저장</h3>
+            <p>반마다 비고칸에 서명이 들어간 일람표 PDF를 저장합니다. 나이스 원본 PDF는 바뀌지 않고, <span class="nw">저장할 때마다</span> 원본에서 새로 만듭니다.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="features" class="band">
+      <div class="wrap features">
+        <article class="feature">
+          <h2>학생은 본인 성적만 봅니다</h2>
+          <p>학생 화면에는 점수, 학급·학년 평균과의 차이, 문항별 결과와 문항마다 전체 정답률, <span class="nw">짧은 피드백 한 줄이</span> 나옵니다. 이름 바로 아래에 나이스 일람표 원본의 본인 줄이 함께 나와 무엇에 서명하는지 <span class="nw">바로 보입니다.</span></p>
+          <ul class="ticks">
+            <li>석차·등수·백분위는 만들지도, <span class="nw">보여 주지도 않습니다.</span></li>
+            <li>다른 학생의 정보는 화면에 나오지 않습니다.</li>
+            <li>학생 화면은 전체 화면으로 고정됩니다. <span class="nw">창 닫기·새로 고침</span> 단축키도 막힙니다.</li>
+          </ul>
+        </article>
+        <article class="feature">
+          <h2>서명은 선생님 휴대폰에 손으로</h2>
+          <p>선생님의 휴대폰이나 태블릿 PC를 서명 패드로 씁니다. <span class="nw">QR 두 번이면 연결됩니다.</span> 첫 번째 QR로 <span class="nw">노트북 핫스팟에</span> 접속하고, 두 번째 QR로 <span class="nw">서명 페이지를 엽니다.</span> 학생이 [서명하기]를 누르면 휴대폰에 <span class="nw">서명 칸이 뜨고,</span> 위쪽에 일람표 본인 줄이 같이 나옵니다.</p>
+          <ul class="ticks">
+            <li>서명은 비고칸 크기에 맞춰 얹습니다. <span class="nw">나이스 양식은</span> 고치지 않습니다.</li>
+            <li>다시 받아야 하면 [다시 서명하기]. <span class="nw">마지막 서명만 남습니다.</span></li>
+            <li>휴대폰 연결이 안 되는 날에는 PC 화면에 <span class="nw">직접 서명할 수도 있습니다.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy" class="band band-ink">
+      <div class="wrap privacy-head">
+        <h2>학교망도 인터넷도 거치지 않습니다</h2>
+        <p class="key"><mark>서명 데이터는 노트북과 서명용 휴대폰 사이에서만 오갑니다.</mark></p>
+      </div>
+      <div class="wrap privacy-grid">
+        <div>
+          <p>노트북이 켠 모바일 핫스팟(WPA2 암호)에 선생님 휴대폰을 직접 연결합니다. 학교망, 인터넷, 외부 서버를 지나지 않습니다. 몇점은 서버, 클라우드, <span class="nw">외부 AI,</span> 통계 수집, 자동 업데이트를 쓰지 않습니다.</p>
+          <dl class="facts">
+            <div><dt>휴대폰으로 가는 것</dt><dd>반·번호, 가운데를 가린 이름, 일람표 본인 줄 그림(머리글과 본인 행. 이 줄의 이름·점수가 보입니다)뿐입니다. 다른 학생 정보는 가지 않습니다.</dd></div>
+            <div><dt>휴대폰이 보내는 것</dt><dd>서명 획의 좌표뿐입니다. 휴대폰에는 성적과 서명을 저장하지 않습니다.</dd></div>
+            <div><dt>노트북에 저장되는 것</dt><dd>AES-256-GCM으로 암호화해 둡니다. 같은 PC의 <span class="nw">같은 Windows 계정에서만</span> 열립니다.</dd></div>
+            <div><dt>연결 주소</dt><dd>실행할 때마다 새로 만드는 임의 토큰이 들어가고, <span class="nw">핫스팟 주소에서만 열립니다.</span></dd></div>
+          </dl>
+          <p><a class="link-light" href="privacy.html">개인정보 처리 안내 전문 보기</a></p>
+        </div>
+        <div class="mock mock-hotspot" data-mock="hotspot" aria-hidden="true">
+          <svg class="hs" viewBox="0 0 440 340" role="presentation">
+            <g class="hs-out">
+              <g transform="translate(40 26)"><rect width="100" height="40" rx="8"/><text x="50" y="26">학교망</text></g>
+              <g transform="translate(170 26)"><rect width="100" height="40" rx="8"/><text x="50" y="26">인터넷</text></g>
+              <g transform="translate(300 26)"><rect width="100" height="40" rx="8"/><text x="50" y="26">서버</text></g>
+              <path class="hs-cut" d="M90 66 L170 196 M220 66 L220 196 M350 66 L270 196"/>
+              <g class="hs-x"><path d="M122 120 l14 14 m0 -14 l-14 14"/><path d="M213 120 l14 14 m0 -14 l-14 14"/><path d="M304 120 l14 14 m0 -14 l-14 14"/></g>
+            </g>
+            <g class="hs-dev" transform="translate(28 200)">
+              <rect x="0" y="0" width="128" height="80" rx="6"/>
+              <rect class="hs-screen" x="8" y="8" width="112" height="64" rx="3"/>
+              <path d="M-12 86 h152 l-10 10 h-132 z"/>
+              <text class="hs-label" x="64" y="124">노트북</text>
+            </g>
+            <g class="hs-dev" transform="translate(338 186)">
+              <rect x="0" y="0" width="64" height="112" rx="10"/>
+              <rect class="hs-screen" x="6" y="12" width="52" height="86" rx="3"/>
+              <text class="hs-label" x="32" y="138">휴대폰</text>
+            </g>
+            <path class="hs-link" d="M170 242 C230 228 280 228 330 242"/>
+            <path class="hs-flow" d="M170 242 C230 228 280 228 330 242"/>
+            <text class="hs-tag" x="250" y="214">노트북 핫스팟 · WPA2</text>
+            <text class="hs-tag2" x="250" y="270">서명 획 좌표만 오감</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis" class="band">
+      <div class="wrap">
+        <div class="analysis-copy">
+          <h2>덤으로, 문항 분석</h2>
+          <p>교사 화면에서만 보입니다. 정기고사는 문항별 정답률, 변별도, 선택지 분포, 매력적인 오답, 반별 비교를 <span class="nw">보여 줍니다.</span> 수행평가는 영역별 요약과 점수 분포를 봅니다.</p>
+          <p>학교 문항정보표에서 내용영역과 성취기준을 붙여 넣으면 영역별 득점률이 나오고, 학생 화면 문항 칸에 <span class="nw">복습할 영역이</span> 한 줄로 붙습니다. xlsx로 내보낼 때는 학생 이름 없이 집계만 담습니다.</p>
+        </div>
+        <div class="mock mock-analysis" data-mock="analysis" aria-hidden="true">
+          <div class="mk">
+            <div class="ia-panel">
+              <div class="ia-title2">문항별 분석</div>
+              <div class="ia-legend">정답률 낮은 문항, 변별도 0.2 미만(<span class="flag">낮음</span>)·음수 문항, 매력적인 오답(<span class="seg-key"></span>)을 확인하세요.</div>
+              <div class="ia-table">
+                <div class="ia-row ia-head"><span>문항</span><span>정답</span><span class="num">배점</span><span>정답률</span><span class="num">변별도</span><span>선택지 분포</span><span class="num">무응답·복수</span></div>
+                  <div class="ia-row"><span>1</span><span class="ia-ans">5</span><span class="num">3.8</span><span><span class="rate-bar"><span style="width:81%;background:#c9cff2"></span><em>81%</em></span></span><span class="num">0.42</span><span><span class="choice-bar"><span class="seg" style="flex:3"></span><span class="seg" style="flex:5"></span><span class="seg" style="flex:4"></span><span class="seg" style="flex:7">4</span><span class="seg correct" style="flex:81">5</span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>2</span><span class="ia-ans">2</span><span class="num">4.1</span><span><span class="rate-bar"><span style="width:74%;background:#c9cff2"></span><em>74%</em></span></span><span class="num">0.51</span><span><span class="choice-bar"><span class="seg" style="flex:8">1</span><span class="seg correct" style="flex:74">2</span><span class="seg" style="flex:6">3</span><span class="seg" style="flex:7">4</span><span class="seg" style="flex:5"></span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>3</span><span class="ia-ans">3</span><span class="num">4.5</span><span><span class="rate-bar"><span style="width:47%;background:#f6cfdc"></span><em>47%</em></span></span><span class="num">0.61</span><span><span class="choice-bar"><span class="seg" style="flex:5"></span><span class="seg" style="flex:6">2</span><span class="seg correct" style="flex:47">3</span><span class="seg attractive" style="flex:38">4</span><span class="seg" style="flex:4"></span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>4</span><span class="ia-ans">1</span><span class="num">3.7</span><span><span class="rate-bar"><span style="width:66%;background:#c9cff2"></span><em>66%</em></span></span><span class="num">0.58</span><span><span class="choice-bar"><span class="seg correct" style="flex:66">1</span><span class="seg" style="flex:9">2</span><span class="seg" style="flex:12">3</span><span class="seg" style="flex:8">4</span><span class="seg" style="flex:5"></span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>5</span><span class="ia-ans">4</span><span class="num">4.2</span><span><span class="rate-bar"><span style="width:23%;background:#f2a6b0"></span><em>23%</em></span></span><span class="num">0.44</span><span><span class="choice-bar"><span class="seg attractive" style="flex:41">1</span><span class="seg" style="flex:9">2</span><span class="seg" style="flex:15">3</span><span class="seg correct" style="flex:23">4</span><span class="seg" style="flex:12">5</span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>6</span><span class="ia-ans">2</span><span class="num">4.1</span><span><span class="rate-bar"><span style="width:58%;background:#dcd6f3"></span><em>58%</em></span></span><span class="num">0.73</span><span><span class="choice-bar"><span class="seg" style="flex:7">1</span><span class="seg correct" style="flex:58">2</span><span class="seg attractive" style="flex:22">3</span><span class="seg" style="flex:8">4</span><span class="seg" style="flex:5"></span></span></span><span class="num muted-n">0% · 0%</span></div>
+                  <div class="ia-row"><span>7</span><span class="ia-ans">5</span><span class="num">3.8</span><span><span class="rate-bar"><span style="width:92%;background:#c9cff2"></span><em>92%</em></span></span><span class="num">0.12 <span class="flag">낮음</span></span><span><span class="choice-bar"><span class="seg" style="flex:2"></span><span class="seg" style="flex:3"></span><span class="seg" style="flex:1"></span><span class="seg" style="flex:2"></span><span class="seg correct" style="flex:92">5</span></span></span><span class="num muted-n">0% · 0%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="band">
+      <div class="wrap">
+        <h2>설치와 준비물</h2>
+        <div class="install-grid">
+          <div>
+            <h3>준비물</h3>
+            <ul class="ruled">
+              <li>Windows 노트북 또는 PC. 무선랜이 있어 모바일 핫스팟을 <span class="nw">켤 수 있어야 합니다.</span></li>
+              <li>서명 패드로 쓸 안드로이드 휴대폰이나 태블릿 PC와 크롬</li>
+              <li>나이스에서 내려받은 성적 파일
+                <span class="sub">정기고사: 반별 학생답 정오표(xlsx), 반별 교과목별 일람표(PDF), 학년 전체 교과목별 일람표(xlsx, 선택)</span>
+                <span class="sub">수행평가: 반별 강의실별 일람표(xlsx)와 PDF</span>
+              </li>
+            </ul>
+            <p class="note">노트북이 학교 Wi-Fi나 유선에 연결된 상태에서 핫스팟을 켭니다. 서명 데이터는 노트북과 휴대폰 사이에서만 오가고, 학교망이나 인터넷으로 나가지 않습니다.</p>
+            <p class="muted">무선랜이 없는 PC는 핫스팟을 켤 수 없습니다. 이때는 <span class="nw">PC 화면에 직접 서명합니다.</span></p>
+          </div>
+          <div>
+            <h3>설치 순서</h3>
+            <ol class="ruled numbered">
+              <li>받은 <code>ScoreCheck-Setup</code> 파일을 실행합니다. 관리자 권한 없이 <span class="nw">현재 사용자에게 설치됩니다.</span></li>
+              <li>「Windows의 PC 보호」 창이 뜨면 <b>추가&nbsp;정보 → 실행</b>을 누릅니다. 코드 서명이 아직 없어서 <span class="nw">뜨는 창입니다.</span></li>
+              <li>바탕화면의 <b>몇점</b>을 실행합니다.</li>
+              <li>처음 휴대폰을 연결할 때 Windows 방화벽 창이 뜨면 허용합니다.</li>
+              <li>안드로이드 기기는 처음 한 번 <b>설정 → 애플리케이션 → Chrome → 권한 → 근처&nbsp;기기 → 허용</b>을 해 둡니다.</li>
+            </ol>
+            <a class="btn btn-ink" data-gh="releases" href="#install">Windows용 무료 다운로드</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="band">
+      <div class="wrap faq">
+        <h2>자주 묻는 질문</h2>
+        <details>
+          <summary>학교 업무망에서도 되나요?</summary>
+          <p>업무망에 연결된 학교 노트북에서 확인했습니다. 학교마다 무선·핫스팟 정책이 달라 안 될 수 있습니다. 핫스팟을 켤 수 없으면 PC 화면에 직접 서명할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>아이폰·아이패드로도 서명할 수 있나요?</summary>
+          <p>안드로이드 크롬에서 확인했고, 아이폰·아이패드는 아직 확인하지 못했습니다.</p>
+        </details>
+        <details>
+          <summary>어떤 나이스 양식을 쓸 수 있나요?</summary>
+          <p>중학교 나이스 정기고사 교과목별 일람표·수행평가 강의실별 일람표로 확인했습니다. 고등학교 양식은 아직 확인 전입니다. 학교, 학년, 반 수, 과목, 문항 수는 정해 두지 않아 파일에 있는 대로 읽습니다.</p>
+        </details>
+        <details>
+          <summary>휴대폰에서 서명 페이지가 안 열려요.</summary>
+          <p><code>ERR_TOO_MANY_RETRIES</code>가 뜨면 안드로이드 크롬의 근처 기기 권한이 꺼져 있는 경우입니다. 설정 → 애플리케이션 → Chrome → 권한 → 근처 기기를 허용하세요. 휴대폰이 노트북 핫스팟에 연결됐는지, 방화벽을 허용했는지도 확인하세요. 그래도 안 되면 PC 화면에 서명합니다.</p>
+        </details>
+        <details>
+          <summary>설치할 때 경고 창이 떠요.</summary>
+          <p>아직 코드 서명이 없어 「Windows의 PC 보호」 창이 뜰 수 있습니다. 추가 정보 → 실행을 누르면 설치됩니다.</p>
+        </details>
+        <details>
+          <summary>학생 정보는 어디에 저장되고, 언제 지워지나요?</summary>
+          <p>선생님 PC의 Windows 사용자 폴더에 암호화해 저장하고, 선생님이 지울 때까지 남습니다. 첫 화면 「이전 작업」에서 [서명 삭제](받은 서명만) 또는 [작업 삭제](성적·서명·문항정보·원본 사본 전부)로 지웁니다. 만든 지 30일이 지난 작업에는 정리 권장 표시가 붙고, 앱을 제거하면 앱에 저장된 데이터도 함께 지워집니다.</p>
+        </details>
+        <details>
+          <summary>석차는 왜 안 보이나요?</summary>
+          <p>학생에게는 본인 점수와 평균과의 차이까지만 보여 주기로 했습니다. 몇점은 석차·등수·백분위를 어떤 화면과 파일에도 만들지 않습니다.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="brand brand-foot"><img src="assets/icon.png" alt="" width="28" height="28"><span>몇점</span></p>
+        <p>제작 두리쌤</p>
+        <p class="links">
+          <a href="https://www.instagram.com/trdoolee">Instagram</a>
+          <a href="https://blog.naver.com/trdoolee">블로그</a>
+          <a data-gh="repo" href="#install">GitHub</a>
+          <a href="privacy.html">개인정보 처리 안내</a>
+        </p>
+      </div>
+      <div>
+        <h3>이용 조건</h3>
+        <ul>
+          <li>교육 목적으로 자유롭게 사용하실 수 있습니다.</li>
+          <li>재배포 시 출처(제작자 표기)를 유지해 주세요.</li>
+          <li>코드를 임의로 수정한 버전을 <span class="nw">다시 배포하지 말아 주세요.</span></li>
+          <li>수정이 필요하시면 아래 연락처로 요청해 주세요.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>글꼴</h3>
+        <p>학교안심 산뜻돋움 (KERIS, SIL OFL 1.1)<br>
+          <a href="fonts/OFL.txt">라이선스</a> · <a href="https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202301090000000000001">배포처</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

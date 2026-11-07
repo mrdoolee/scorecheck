@@ -1,0 +1,20 @@
+# Real student data - never commit
+sample_data/
+scripts/phase0/out/
+
+node_modules/
+out/
+dist/
+release/
+*.log
+.env
+.dorms-check/
+
+# Font files as handed over (the app uses the copies in resources/fonts)
+font/
+
+# Brainstorm mockups
+.superpowers/
+
+# Privacy scan output (contains locations of real data)
+privacy-scan.txt
