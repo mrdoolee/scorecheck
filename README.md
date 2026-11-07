@@ -4,7 +4,6 @@
 
 소개 페이지: [sc-trdoolee.vercel.app](https://sc-trdoolee.vercel.app) · 내려받기: [GitHub Releases 최신 버전](../../releases/latest)
 
-설계 문서: [설계_청사진.md](설계_청사진.md)
 
 ## 사용 흐름
 
